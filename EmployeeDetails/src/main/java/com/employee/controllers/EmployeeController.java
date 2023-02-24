@@ -34,10 +34,7 @@ public class EmployeeController {
 	public ResponseEntity<List<Employee>>  getAllEmployeesDetails() {
 		
 		List<Employee> listOfEmployees = new ArrayList<>();
-		
 		listOfEmployees = empService.getAllEmployeeDetails();
-		List<EmployeeResponse> responseList = createResponse(listOfEmployees);
-		
 		return new ResponseEntity<>(listOfEmployees, HttpStatus.OK);
 	}
 	
