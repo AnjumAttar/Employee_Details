@@ -32,10 +32,18 @@ public class EmployeeController {
 	
 
 	@GetMapping("/allEmployeesDetails")
+<<<<<<< HEAD
 	public ResponseEntity<List<EmployeeResponse>> getAllEmployeesDetails() {
 
 		empResponseList = empService.getAllEmployeeDetails();
         return new ResponseEntity<>(empResponseList, HttpStatus.OK);
+=======
+	public ResponseEntity<List<Employee>>  getAllEmployeesDetails() {
+		
+		List<Employee> listOfEmployees = new ArrayList<>();
+		listOfEmployees = empService.getAllEmployeeDetails();
+		return new ResponseEntity<>(listOfEmployees, HttpStatus.OK);
+>>>>>>> 9034f38118441262b6655660e02558a8b91e714b
 	}
 	
 
