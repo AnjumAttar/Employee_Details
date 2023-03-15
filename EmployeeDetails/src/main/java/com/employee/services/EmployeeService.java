@@ -8,11 +8,13 @@ import com.employee.response.EmployeeResponse;
 
 public interface EmployeeService {
 	
-	public Employee createEmployeeDetails(Employee emp);
+	public EmployeeResponse createEmployeeDetails(Employee emp);
 	
-	public Employee getEmployeeDetails(int id) throws EmployeeException;
-	public List<Employee> getAllEmployeeDetails();
+	public EmployeeResponse getEmployeeDetailsById(int id) throws EmployeeException;
+	public List<EmployeeResponse> getAllEmployeeDetails();
 	public void deleteEmployee(int id);
-	public Employee updateEmployee(int id,Employee updatedEmployee);
+	public EmployeeResponse updateEmployee(int id,Employee updatedEmployee);
+
+	
 
 }
